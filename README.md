@@ -79,5 +79,4 @@ d - move right
 
 You can try it on the [web](https://react-simple-snake.netlify.app/) 
 
-![Uploading 223162080-6a374eb5-7a5d-4eaa-9088-3798977c4191.png…]()
-
+![223162080-6a374eb5-7a5d-4eaa-9088-3798977c4191](https://user-images.githubusercontent.com/94018348/223162746-1b3f4267-60cc-45e6-a2f6-3236ed1bf3f5.png)
