@@ -1,21 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import Snake from './Components/Snake';
 
-
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Snake Game with React</p> 
-        
+        <a className="brand" href="./" aria-label="Snake, inicio"><span className="brand-mark" aria-hidden="true">▟</span> PIXEL PLAY</a>
+        <span className="edition">EST. 1976 <span> / </span> REIMAGINADO</span>
       </header>
-      <body className="App-body">
-        <Snake/>
-      </body>
+      <main><Snake /></main>
+      <footer className="App-footer"><span>UN CLÁSICO. UN INTENTO MÁS.</span><span>HECHO DE PÍXELES Y NOSTALGIA <span className="footer-star">✦</span></span></footer>
     </div>
   );
 }
 
-export default App;

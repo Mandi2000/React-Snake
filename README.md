@@ -1,82 +1,36 @@
-# Getting Started with Create React App
+# Snake · Pixel Play
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un Snake con estética pixel art nocturna, hecho con React 17 y Canvas 2D.
 
-## Available Scripts
+## Desarrollo
 
-In the project directory, you can run:
+Requiere Node.js y npm. Instala las dependencias con `npm ci` y ejecuta `npm start`.
+Abre http://localhost:3000.
 
-### `npm start`
+- `npm test -- --watchAll=false --runInBand`: pruebas de lógica e interfaz.
+- `npm run build`: compilación de producción.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Los comandos de inicio y compilación activan el proveedor OpenSSL heredado para
+compatibilizar Webpack 4 (Create React App 4) con Node.js 22. No necesitas configurar
+`NODE_OPTIONS` manualmente. Esta compatibilidad queda limitada al proceso de desarrollo
+o compilación; no cambia el código del juego ejecutado en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Cómo jugar
 
-### `npm test`
+Pulsa **Jugar ahora**. Usa **WASD** o las **flechas** para moverte y **espacio** o el
+botón **Pausa** para pausar o continuar. Al cambiar de pestaña se pausa la partida;
+debes reanudarla manualmente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Cada manzana suma un punto y añade cuatro segmentos. Chocar contra una pared o
+tu cuerpo termina la partida. Completar las 2500 casillas es una victoria.
+El récord se conserva durante la sesión del componente, hasta recargar la página.
 
-### `npm run build`
+## Diseño y estructura
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Canvas lógico de 500 × 500 con cuadrícula de 50 × 50, escalado cuadrado sin suavizado.
+- Sprites dibujados directamente en canvas; decoración pixelada en CSS.
+- Motor puro en `src/Components/game.js` y ciclo de vida en `Snake.js`.
+- Fuente Press Start 2P incluida localmente bajo SIL Open Font License; licencia en `src/assets/OFL.txt`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La distribución se adapta a pantallas pequeñas; esta versión se controla con teclado.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-##Controls
-w - move up
-a - move left
-s - move down
-d - move right
-
-## No Copyright intended
-
-You can try it on the [web](https://react-simple-snake.netlify.app/) 
-
-![223162080-6a374eb5-7a5d-4eaa-9088-3798977c4191](https://user-images.githubusercontent.com/94018348/223162746-1b3f4267-60cc-45e6-a2f6-3236ed1bf3f5.png)

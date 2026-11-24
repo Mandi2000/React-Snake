@@ -1,13 +1,10 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@font-face { font-family: 'Press Start'; src: url('./assets/pixel.ttf') format('truetype'); font-display: swap; }
+:root { --night: #0c111b; --panel: #121c28; --cream: #eef1da; --green: #bcf56b; --muted: #86939f; --line: #26323d; --pixel-font: 'Press Start', monospace; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--cream); background: var(--night); font-family: 'Courier New', monospace; -webkit-font-smoothing: antialiased; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .35; background-image: radial-gradient(#526077 1px, transparent 1px), radial-gradient(#526077 1px, transparent 1px); background-size: 109px 127px, 181px 163px; background-position: 17px 29px, 71px 93px; }
+button { font: inherit; cursor: pointer; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+::selection { color: var(--night); background: var(--green); }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
